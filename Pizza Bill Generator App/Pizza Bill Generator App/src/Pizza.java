@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Pizza {
 
     private int price;
@@ -9,6 +11,13 @@ public class Pizza {
     private boolean isExtraCheeseAdd=false;
     private boolean isExtraToppingAdd=false;
     private boolean isTakeAway=false;
+
+    Scanner input =new Scanner(System.in);
+
+    public static void userMenu(){
+        System.out.println("Welcome Big Taste Pizza! ");
+        System.out.println();
+    }
 
     public Pizza(Boolean veg){
         this.veg=veg;
