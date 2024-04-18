@@ -29,9 +29,9 @@ public class Main {
     }
 
     private static void login(){
-        System.out.println("Enter phone number: ");
+        System.out.print("Enter phone number: ");
         String phoneNumber= input.next();
-        System.out.println("Enter email: ");
+        System.out.print("Enter email: ");
         String email=input.next();
         int n = database.login(phoneNumber, email);
         if (n != -1){
@@ -43,11 +43,11 @@ public class Main {
     }
 
     private static void newUser(){
-        System.out.println("Enter Name:");
+        System.out.print("Enter Name:");
         String name = input.next();
-        System.out.println("Enter phone number:");
+        System.out.print("Enter phone number:");
         String phoneNumber=input.next();
-        System.out.println("Enter email:");
+        System.out.print("Enter email:");
         String email=input.next();
 
         System.out.println("\t1. Admin\n\t2. Normal User");
