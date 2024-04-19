@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class DataBase {
 
-    ArrayList<User> users = new ArrayList<User>();
-    ArrayList<String> usernames = new ArrayList<String>();
+    ArrayList<User> users = new ArrayList<User>(); //representing users in the system.
+    ArrayList<String> usernames = new ArrayList<String>(); //representing the names of the users. This list may be used for tracking user names.
 
     public void AddUser(User s){
         users.add(s);
