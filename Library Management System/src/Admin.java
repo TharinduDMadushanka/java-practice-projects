@@ -5,6 +5,7 @@ public class Admin extends User{
     static String [] books= {"Harry Potter","The Hunger Games","The Lord of the Rings","Pride and Prejudice","Don Quixote","A Tale of Two Cities",
             "The Book Thief","A Tale of Two Cities"};
 
+    static int bookCount=0;
     static Scanner admin = new Scanner(System.in);
 
     public Admin(String name){
@@ -24,7 +25,7 @@ public class Admin extends User{
         System.out.println("1. View Books");
         System.out.println("2. Add Books");
         System.out.println("3. Delete Books");
-        System.out.println("4. Search");
+        System.out.println("4. Search Book count");
         System.out.println("5. Exit");
     }
     public static void viewBook(){
@@ -54,26 +55,31 @@ public class Admin extends User{
         }
     }
 
-    public static void deleteBook(){
-        System.out.print("Enter the name of the book for remove.");
-        String bookToDelete=admin.next();
-        String[] arr=new String[5];
-        int index = -1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].equalsIgnoreCase(bookToDelete)) {
-                index = i;
-                break;
-            }
-        }
-        if (index != -1) {
-            String[] newArr = new String[arr.length - 1];
-            for (int i = 0, j = 0; i < arr.length; i++) {
-                if (i != index) {
-                    newArr[j++] = arr[i];
-                }
-            }
-        } else {
-            System.out.println("Book not found in the list.");
-        }
+//    public static void deleteBook(){
+//        System.out.print("Enter the name of the book for remove.");
+//        String bookToDelete=admin.next();
+//        String[] arr=new String[5];
+//        int index = -1;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i].equalsIgnoreCase(bookToDelete)) {
+//                index = i;
+//                break;
+//            }
+//        }
+//        if (index != -1) {
+//            String[] newArr = new String[arr.length - 1];
+//            for (int i = 0, j = 0; i < arr.length; i++) {
+//                if (i != index) {
+//                    newArr[j++] = arr[i];
+//                }
+//            }
+//        } else {
+//            System.out.println("Book not found in the list.");
+//        }
+//    }
+
+    public void searchBook(){
+        bookCount=books.length;
+        System.out.println(bookCount+" books have in stock");
     }
 }

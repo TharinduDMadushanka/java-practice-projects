@@ -89,10 +89,16 @@ public class Main {
                         break;
                     case 3:
                         System.out.println("Welcome Admin Delete book");
-                        Admin.deleteBook();
+                        //Admin.deleteBook();
                         break;
+                    case 4:
+                        System.out.println("Book count!");
+                        a1.searchBook();
+                    case 5:
+                        System.out.println("Thank you Admin.");
+                        return;
                 }
-            } while (userChoice3 != 5);
+            } while (true);
 
         } else {
             user = new NormalUser(name, email, phoneNumber);
