@@ -101,9 +101,19 @@ public class Main {
             } while (true);
 
         } else {
+            NormalUser n1 = new NormalUser();
+            int userChoice4;
+
             user = new NormalUser(name, email, phoneNumber);
+            n1.menu();
+            System.out.print("What is your choice:");
+            userChoice4 = input.nextInt();
+
+            switch (userChoice4){
+                case 1:
+                    Admin.viewBook();
+                    break;
+            }
         }
-        database.AddUser(user);
-        user.menu();
     }
 }

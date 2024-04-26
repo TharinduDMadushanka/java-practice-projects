@@ -7,6 +7,10 @@ public class NormalUser extends User{
         super(name, email, phoneNumber);
     }
 
+    public NormalUser() {
+
+    }
+
     @Override
     public void menu(){
         System.out.println("1. View Books");

@@ -55,6 +55,16 @@ public class Admin extends User{
         }
     }
 
+    public void deleteBook(){}
+
+    public void searchBook(){
+        bookCount=books.length;
+        System.out.println(bookCount+" books have in stock");
+    }
+}
+
+
+
 //    public static void deleteBook(){
 //        System.out.print("Enter the name of the book for remove.");
 //        String bookToDelete=admin.next();
@@ -77,9 +87,3 @@ public class Admin extends User{
 //            System.out.println("Book not found in the list.");
 //        }
 //    }
-
-    public void searchBook(){
-        bookCount=books.length;
-        System.out.println(bookCount+" books have in stock");
-    }
-}
