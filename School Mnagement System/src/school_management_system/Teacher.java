@@ -9,6 +9,7 @@ public class Teacher {
     private int id;
     private String name;
     private int salary;
+    private int salaryEarned;
 
     /**
      * create a new Teacher object
@@ -20,6 +21,7 @@ public class Teacher {
         this.id=id;
         this.name=name;
         this.salary=salary;
+        this.salaryEarned=0;
     }
 
     /**
@@ -44,5 +46,10 @@ public class Teacher {
      */
     public void setSalary(int salary){
         this.salary=salary;
+    }
+
+    public void receiveSalary(int salary){// adds to salaryEarned & removes the total money earned by the school
+        salaryEarned-=salary;
+        School.updateTotalMoneySpent(salary);
     }
 }

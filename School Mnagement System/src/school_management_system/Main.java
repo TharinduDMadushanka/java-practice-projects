@@ -26,6 +26,11 @@ public class Main {
         School ghs = new School(teacherList, studentList);
 
         tamasha.payFees(5000);
+        Tharindu.payFees(6000);
         System.out.println("GHS has earned: $ " + ghs.getTotalMoneyEarned());
+
+        System.out.println("========= Making School pay Salary ==========");
+        Lizzy.receiveSalary(Lizzy.getSalary());
+        System.out.println("GHS has spent for salary to "+Lizzy.getName()+" and now has $ "+ghs.getTotalMoneyEarned());
     }
 }
