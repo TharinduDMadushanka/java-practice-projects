@@ -14,16 +14,18 @@ public class Main {
         teacherList.add(Melissa);
         teacherList.add(Jhon);
 
-        Student Vince = new Student(1, "Vince", 4);
+        Student tamasha = new Student(1, "tamasha", 4);
         Student Tharindu = new Student(2, "Tharindu", 10);
         Student rooby = new Student(3, "Rooby", 5);
 
         List<Student> studentList = new ArrayList<>();
-        studentList.add(Vince);
+        studentList.add(tamasha);
         studentList.add(Tharindu);
         studentList.add(rooby);
 
         School ghs = new School(teacherList, studentList);
+
+        tamasha.payFees(5000);
         System.out.println("GHS has earned: $ " + ghs.getTotalMoneyEarned());
     }
 }

@@ -35,6 +35,7 @@ public class Student {
 
     /**
      * Use to upgrade the student's grade
+     *
      * @param grade--> grade new grade of the student
      */
     public void setGrade(int grade) {
@@ -45,15 +46,18 @@ public class Student {
      * keep adding the fees to feesPaid field
      * add the fees to the fees paid
      * The school is going to receive the funds.
+     *
      * @param fees --> the fees that the student pays.
      */
-    public void updateFeesPaid(int fees){
-        feesPaid+=feesPaid;
+    public void payFees(int fees) {
+        feesPaid += fees;
+        School.updateTotalMoneyEarned(feesPaid);
     }
 
     /**
      * Getters
-     * @return id,name & grade of student
+     *
+     * @return id, name & grade of student
      * return fees paid by the student
      * return the total fees of the student
      */
@@ -78,5 +82,8 @@ public class Student {
         return feesTotal;
     }
 
+    public int getRemainingFees(){//return remain fees
+        return feesTotal-feesPaid;
+    }
 
 }
