@@ -17,4 +17,8 @@ public class Cashier extends Employee{
         this.password=password;
         this.options=new Option[]{};
     }
+    @Override
+    public String getType() {
+        return "Cashier";
+    }
 }

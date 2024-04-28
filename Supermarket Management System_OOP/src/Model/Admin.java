@@ -17,4 +17,9 @@ public class Admin extends Employee{
         this.password=password;
         this.options=new Option[]{};
     }
+
+    @Override
+    public String getType() {
+        return "Admin";
+    }
 }

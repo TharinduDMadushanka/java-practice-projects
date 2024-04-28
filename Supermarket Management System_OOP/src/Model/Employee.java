@@ -90,4 +90,6 @@ public abstract class Employee {
     public void setPassword(String password){
         this.password=password;
     }
+
+    public abstract int getType();
 }
