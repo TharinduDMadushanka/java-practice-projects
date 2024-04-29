@@ -89,10 +89,21 @@ public class Main {
 
                 case 3:
                     if (forward){
-                        System.out.println("Now playing "+listIterator.previous().toString());
-                        forward=false;
-                    }else {}
-
+                        if (listIterator.hasPrevious()){
+                            System.out.println("Now playing "+listIterator.previous().toString());
+                            forward=false;
+                        }else {
+                            System.out.println("We are at the start of the playlist");
+                        }
+                    }else {
+                        if (listIterator.hasNext()){
+                            System.out.println("Now playing "+ listIterator.next().toString());
+                            forward=true;
+                        }else {
+                            System.out.println("We have reached to the end of list.");
+                        }
+                    }
+                    break;
             }
         }
     }
