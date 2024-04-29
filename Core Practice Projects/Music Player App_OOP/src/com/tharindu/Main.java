@@ -1,8 +1,6 @@
 package com.tharindu;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     private static ArrayList<Album> albums=new ArrayList<>();
@@ -36,7 +34,67 @@ public class Main {
     }
 
     private static void play(LinkedList<Song> playList){
-        System.out.println("This is play method");
+        Scanner sc =new Scanner(System.in);
+        boolean quit =false;
+        boolean forward=true;
+        ListIterator<Song> listIterator=playList.listIterator();
+
+        if (playList.size()==0){
+            System.out.println("This play list have no songs.");
+        }else {
+            System.out.println("Now playing "+listIterator.next().toString());
+            printMenu();
+        }
+
+        while (!quit){
+            int action =sc.nextInt();
+            sc.nextLine();
+
+            switch (action){
+
+                case 0:
+                    System.out.println("Playlist complete!");
+                    quit=true;
+                    break;
+
+                case 1:
+                    if (!forward){
+                        if (listIterator.hasNext()){
+                            listIterator.next();
+                        }
+                        forward=true;
+                    }
+                    if (listIterator.hasNext()){
+                        System.out.println("Now playing "+listIterator.toString());
+                    }else {
+                        System.out.println("There are no songs exist reach to the end of list.");
+                        forward=false;
+                    }
+                    break;
+
+                case 2:
+                    if (forward){
+                        if (listIterator.hasPrevious()){
+                            listIterator.previous();
+                        }
+                        forward=false;
+                    }
+                    if (listIterator.hasPrevious()){
+                        System.out.println("Now playing "+listIterator.previous().toString());
+                    }else {
+                        System.out.println("We are in the first song.");
+                        forward=false;
+                    }
+                    break;
+
+                case 3:
+                    if (forward){
+                        System.out.println("Now playing "+listIterator.previous().toString());
+                        forward=false;
+                    }else {}
+
+            }
+        }
     }
 
     private static void printMenu(){
