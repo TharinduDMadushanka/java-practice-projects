@@ -36,7 +36,7 @@ public class Main {
     }
 
     private static void play(LinkedList<Song> playList){
-
+        System.out.println("This is play method");
     }
 
     private static void printMenu(){
