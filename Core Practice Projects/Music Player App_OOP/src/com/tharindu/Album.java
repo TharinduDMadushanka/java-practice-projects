@@ -38,13 +38,24 @@ public class Album {
         return false;
     }
 
-    public boolean addToPlayList(int trackNumber, LinkedList<Song> playList){
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> PlayList){
         int index=trackNumber-1;
         if (index>0 && index<=this.songs.size()){
-            playList.add(this.songs.get(index));
+            PlayList.add(this.songs.get(index));
             return true;
         }
         System.out.println("This album does not have song with track number "+trackNumber);
+        return false;
+    }
+
+    public boolean addToPlayList(String title, LinkedList<Song> PlayList){
+        for (Song checkSong :this.songs){
+            if (checkSong.getTitle().equals(title)){
+                PlayList.add(checkSong);
+                return true;
+            }
+        }
+        System.out.println(title+" There is no such song in album.");
         return false;
     }
 }
