@@ -1,6 +1,7 @@
 package com.tharindu;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -38,5 +39,25 @@ public class Main {
 
     }
 
+    private static void printMenu(){
+        System.out.println("Available options.\n press");
+        System.out.println("0 - to quit\n"+
+                "1 - play next song\n"+
+                "2 - play previous song\n "+
+                "3 - replay the current song \n"+
+                "4 - list of all songs \n"+
+                "5 - print all available options \n"+
+                "6 - delete current song");
+    }
 
+    private static void printList(LinkedList<Song> playList){
+        Iterator<Song> iterator =playList.iterator();
+        System.out.println("------------------");
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("------------------");
+    }
 }
