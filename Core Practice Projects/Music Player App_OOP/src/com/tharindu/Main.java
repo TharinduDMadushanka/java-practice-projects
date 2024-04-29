@@ -65,7 +65,7 @@ public class Main {
                         forward=true;
                     }
                     if (listIterator.hasNext()){
-                        System.out.println("Now playing "+listIterator.toString());
+                        System.out.println("Now playing "+listIterator.next().toString());
                     }else {
                         System.out.println("There are no songs exist reach to the end of list.");
                         forward=false;
@@ -104,19 +104,39 @@ public class Main {
                         }
                     }
                     break;
+
+                case 4:
+                    printList(playList);
+                    break;
+
+                case 5:
+                    printMenu();
+
+                case 6:
+                    if (playList.size()>0){
+                        listIterator.remove();
+                        if (listIterator.hasNext()){
+                            System.out.println("Now playing "+listIterator.next().toString());
+                        }else {
+                            if (listIterator.hasPrevious()){
+                                System.out.println("Now playing "+listIterator.previous().toString());
+                            }
+                        }
+                    }
             }
         }
     }
 
     private static void printMenu(){
-        System.out.println("Available options.\n press");
+        System.out.println("Available options.\n");
         System.out.println("0 - to quit\n"+
                 "1 - play next song\n"+
-                "2 - play previous song\n "+
-                "3 - replay the current song \n"+
-                "4 - list of all songs \n"+
-                "5 - print all available options \n"+
+                "2 - play previous song\n"+
+                "3 - replay the current song\n"+
+                "4 - list of all songs\n"+
+                "5 - print all available options\n"+
                 "6 - delete current song");
+        System.out.print("press:");
     }
 
     private static void printList(LinkedList<Song> playList){
