@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        menuLine();
+        menu();
     }
 
     public static void menuLine() {
@@ -12,5 +12,13 @@ public class Main {
 
     public static void menu() {
 
+        menuLine();
+        System.out.println("\n|           TO DO APPLICATION           |");
+        menuLine();
+
+        System.out.println("\n\t1.Add Task\n\t2.Edit Task\n\t3.Delete Task\n\t4.Mark Task as Complete" +
+                "\n\t5.Task List");
+
+        menuLine();
     }
 }
