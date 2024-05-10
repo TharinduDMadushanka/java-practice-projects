@@ -3,24 +3,27 @@ import java.util.Scanner;
 
 public class Main {
 
-    static Scanner input =new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
 
-    private static ArrayList<Task> tasks=new ArrayList<>();
+    private static ArrayList<Task> tasks = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        menu();
+        int choice;
+        do {
+            menu();
 
-        System.out.print("Enter Your choice:");
-        int choice=input.nextInt();
+            System.out.print("\npress(1-) to quit. Enter Your choice:");
+            choice = input.nextInt();
 
-        switch (choice){
-            case 1:
-                System.out.println("You can add new Tasks!");
-                addTask();
 
-        }
+            switch (choice) {
+                case 1:
+                    System.out.println("You can add new Tasks!");
+                    addTask();
 
+            }
+        } while (choice == -1);
     }
 
     public static void menuLine() {
@@ -41,17 +44,25 @@ public class Main {
         menuLine();
     }
 
-    public static void addTask(){
-        System.out.print("Enter task Description:");
-        String task=input.next();
+    public static void addTask() {
 
-        System.out.print("Enter due date:");
-        String date=input.next();
+        char choice;
 
-        Task newTask=new Task(task,date);
-        tasks.add(newTask);
+        do {
 
-        System.out.println("Task added Successfully!");
+            System.out.print("Enter task Description:");
+            String task = input.next();
 
+            System.out.print("Enter due date:");
+            String date = input.next();
+
+            Task newTask = new Task(task, date);
+            tasks.add(newTask);
+
+            System.out.println("Task added Successfully!");
+
+            System.out.println("Do you want add another task:(y/n)");
+            choice = input.next().toLowerCase().charAt(0);
+        } while (choice == 'n');
     }
 }
