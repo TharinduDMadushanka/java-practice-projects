@@ -80,6 +80,26 @@ public class Main {
 
     public static void editTask() {
 
+        System.out.print("Enter the task number for edit:");
+        int taskNumber= input.nextInt();
+
+        if (taskNumber<0 || taskNumber>taskCount){
+            System.out.println("Invalid task number!");
+            return;
+        }
+
+        int index =taskNumber-1;
+
+        System.out.print("Enter new task Description: ");
+        String newTask= input.next();
+
+        System.out.print("Enter new Due date:");
+        String newDate = input.next();
+
+        tasks[index][0].setDescription(newTask);
+        tasks[index][0].setDueDate(newDate);
+
+        System.out.println("Task Updated Successfully.");
     }
 
     public static void showTasks(){

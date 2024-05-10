@@ -13,4 +13,12 @@ public class Task {
     public String getDueDate(){
         return dueDate;
     }
+
+    public void setDescription(String description){
+        this.description=description;
+    }
+
+    public void setDueDate(String dueDate){
+        this.dueDate=dueDate;
+    }
 }
