@@ -20,16 +20,17 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("You can add new Tasks!");
+                    System.out.println("YOU CAN ADD NEW TASKS!");
                     addTask();
                     break;
 
                 case 2:
-                    System.out.println("You can update Tasks!");
+                    System.out.println("YOU CAN UPDATE TASKS!");
                     editTask();
                     break;
 
                 case 5:
+                    System.out.println("\t~ TASK LIST ~");
                     showTasks();
                     break;
 
