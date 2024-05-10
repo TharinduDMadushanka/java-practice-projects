@@ -112,7 +112,7 @@ public class Main {
 
             System.out.print("Do you want add another task (y/n):");
             choice = input.next().toLowerCase().charAt(0);
-        } while (choice!='y');
+        } while (choice == 'y');
     }
 
     public static void showTasks() {
