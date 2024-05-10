@@ -11,6 +11,15 @@ public class Main {
 
         menu();
 
+        System.out.print("Enter Your choice:");
+        int choice=input.nextInt();
+
+        switch (choice){
+            case 1:
+                System.out.println("You can add new Tasks!");
+                addTask();
+
+        }
 
     }
 
