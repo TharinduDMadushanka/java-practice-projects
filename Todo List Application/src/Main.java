@@ -24,6 +24,11 @@ public class Main {
                     addTask();
                     break;
 
+                case 2:
+                    System.out.println("You can update Tasks!");
+                    editTask();
+                    break;
+
                 case 5:
                     showTasks();
                     break;
