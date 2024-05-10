@@ -15,7 +15,7 @@ public class Main {
         do {
             menu();
 
-            System.out.print("\npress(1-) to quit. Enter Your choice:");
+            System.out.print("\npress(-1) to quit. Enter Your choice:");
             choice = input.nextInt();
 
             switch (choice) {
