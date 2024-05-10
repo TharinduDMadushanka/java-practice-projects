@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -6,9 +5,9 @@ public class Main {
     static Scanner input = new Scanner(System.in);
 
     //private static ArrayList<Task> tasks = new ArrayList<>();
-    static int taskCount=0;
+    static int taskCount = 0;
     static int date;
-    static Task[][] tasks=new Task[taskCount+1][2];
+    static Task[][] tasks = new Task[taskCount + 1][2];
 
     public static void main(String[] args) {
 
@@ -59,17 +58,32 @@ public class Main {
             String date = input.next();
 
             Task newTask = new Task(task, date);
-            tasks[taskCount][0]=newTask;
+            tasks[taskCount][0] = newTask;
             taskCount++;
 
             System.out.println("Task added Successfully!");
 
             System.out.print("Do you want add another task (y/n):");
             choice = input.next().toLowerCase().charAt(0);
+            extendArray();
         } while (choice == 'y');
+
     }
 
-    public static void editTask(){
+    public static void editTask() {
 
+    }
+
+    private static void extendArray() {
+        // Create a new temporary array with double the size of the original array
+        Task[][] temp = new Task[tasks.length * 2][2];
+
+        // Copy the contents of the original array into the temporary array
+        System.arraycopy(tasks, 0, temp, 0, tasks.length);
+
+        // Update the tasks array reference to point to the new extended array
+        tasks = temp;
+
+        System.out.println("Array extended successfully!");
     }
 }
