@@ -5,7 +5,10 @@ public class Main {
 
     static Scanner input = new Scanner(System.in);
 
-    private static ArrayList<Task> tasks = new ArrayList<>();
+    //private static ArrayList<Task> tasks = new ArrayList<>();
+    static int taskCount=0;
+    static int date;
+    static Task[][] tasks=new Task[taskCount+1][2];
 
     public static void main(String[] args) {
 
@@ -56,12 +59,17 @@ public class Main {
             String date = input.next();
 
             Task newTask = new Task(task, date);
-            tasks.add(newTask);
+            tasks[taskCount][0]=newTask;
+            taskCount++;
 
             System.out.println("Task added Successfully!");
 
             System.out.print("Do you want add another task (y/n):");
             choice = input.next().toLowerCase().charAt(0);
         } while (choice == 'y');
+    }
+
+    public static void editTask(){
+
     }
 }
