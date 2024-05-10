@@ -1,7 +1,17 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
+
+    static Scanner input =new Scanner(System.in);
+
+    private static ArrayList<Task> tasks=new ArrayList<>();
+
     public static void main(String[] args) {
 
         menu();
+
+
     }
 
     public static void menuLine() {
@@ -20,5 +30,19 @@ public class Main {
                 "\n\t5.Task List");
 
         menuLine();
+    }
+
+    public static void addTask(){
+        System.out.print("Enter task Description:");
+        String task=input.next();
+
+        System.out.print("Enter due date:");
+        String date=input.next();
+
+        Task newTask=new Task(task,date);
+        tasks.add(newTask);
+
+        System.out.println("Task added Successfully!");
+
     }
 }
