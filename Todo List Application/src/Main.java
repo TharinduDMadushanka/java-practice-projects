@@ -16,14 +16,13 @@ public class Main {
             System.out.print("\npress(1-) to quit. Enter Your choice:");
             choice = input.nextInt();
 
-
             switch (choice) {
                 case 1:
                     System.out.println("You can add new Tasks!");
                     addTask();
 
             }
-        } while (choice == -1);
+        } while (choice != -1);
     }
 
     public static void menuLine() {
@@ -61,8 +60,8 @@ public class Main {
 
             System.out.println("Task added Successfully!");
 
-            System.out.println("Do you want add another task:(y/n)");
+            System.out.print("Do you want add another task (y/n):");
             choice = input.next().toLowerCase().charAt(0);
-        } while (choice == 'n');
+        } while (choice == 'y');
     }
 }
