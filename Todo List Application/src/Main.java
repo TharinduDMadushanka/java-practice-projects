@@ -22,6 +22,14 @@ public class Main {
                 case 1:
                     System.out.println("You can add new Tasks!");
                     addTask();
+                    break;
+
+                case 5:
+                    showTasks();
+                    break;
+
+                default:
+                    System.out.println("Invalid input.");
 
             }
         } while (choice != -1);
@@ -72,6 +80,14 @@ public class Main {
 
     public static void editTask() {
 
+    }
+
+    public static void showTasks(){
+        for (int i=0;i<tasks.length;i++) {
+            for (int j=0;j<tasks[i].length;j++) {
+                System.out.println(tasks[i][j]);
+            }
+        }
     }
 
     private static void extendArray() {
