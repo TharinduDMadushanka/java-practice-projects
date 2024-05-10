@@ -80,33 +80,41 @@ public class Main {
 
     public static void editTask() {
 
-        System.out.print("Enter the task number for edit:");
-        int taskNumber= input.nextInt();
+        int choice;
 
-        if (taskNumber<0 || taskNumber>taskCount){
-            System.out.println("Invalid task number!");
-            return;
-        }
+        do {
 
-        int index =taskNumber-1;
+            System.out.print("Enter the task number for edit:");
+            int taskNumber = input.nextInt();
 
-        System.out.print("Enter new task Description: ");
-        String newTask= input.next();
+            if (taskNumber < 0 || taskNumber > taskCount) {
+                System.out.println("Invalid task number!");
+                return;
+            }
 
-        System.out.print("Enter new Due date:");
-        String newDate = input.next();
+            int index = taskNumber - 1;
 
-        tasks[index][0].setDescription(newTask);
-        tasks[index][0].setDueDate(newDate);
+            System.out.print("Enter new task Description: ");
+            String newTask = input.next();
 
-        System.out.println("Task Updated Successfully.");
+            System.out.print("Enter new Due date:");
+            String newDate = input.next();
+
+            tasks[index][0].setDescription(newTask);
+            tasks[index][0].setDueDate(newDate);
+
+            System.out.println("Task Updated Successfully.");
+
+            System.out.print("Do you want add another task (y/n):");
+            choice = input.next().toLowerCase().charAt(0);
+        } while (choice!='y');
     }
 
-    public static void showTasks(){
-        for (int i=0;i<taskCount;i++){
-            System.out.println("~ Task "+(i+1)+" ~");
-            System.out.println("\t-Description : "+tasks[i][0].getDescription());
-            System.out.println("\t-Due date : "+tasks[i][0].getDueDate());
+    public static void showTasks() {
+        for (int i = 0; i < taskCount; i++) {
+            System.out.println("~ Task " + (i + 1) + " ~");
+            System.out.println("\t-Description : " + tasks[i][0].getDescription());
+            System.out.println("\t-Due date : " + tasks[i][0].getDueDate());
         }
     }
 
