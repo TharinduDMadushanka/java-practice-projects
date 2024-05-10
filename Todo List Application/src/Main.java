@@ -83,10 +83,10 @@ public class Main {
     }
 
     public static void showTasks(){
-        for (int i=0;i<tasks.length;i++) {
-            for (int j=0;j<tasks[i].length;j++) {
-                System.out.println(tasks[i][j]);
-            }
+        for (int i=0;i<taskCount;i++){
+            System.out.println("~ Task "+(i+1)+" ~");
+            System.out.println("\t-Description : "+tasks[i][0].getDescription());
+            System.out.println("\t-Due date : "+tasks[i][0].getDueDate());
         }
     }
 

@@ -6,4 +6,11 @@ public class Task {
         this.description=description;
         this.dueDate=dueDate;
     }
+
+    public String getDescription(){
+        return description;
+    }
+    public String getDueDate(){
+        return dueDate;
+    }
 }
