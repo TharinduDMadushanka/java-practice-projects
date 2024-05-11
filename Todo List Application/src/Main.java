@@ -34,7 +34,7 @@ public class Main {
                     deleteTask();
                     break;
 
-                case 5:
+                case 4:
                     System.out.println("\t~ TASK LIST ~");
                     showTasks();
                     break;
@@ -58,8 +58,7 @@ public class Main {
         System.out.println("\n|\t\t\tTO DO APPLICATION\t\t\t|");
         menuLine();
 
-        System.out.println("\n\t1.Add Task\n\t2.Edit Task\n\t3.Delete Task\n\t4.Mark Task as Complete" +
-                "\n\t5.Task List");
+        System.out.println("\n\t1.Add Task\n\t2.Edit Task\n\t3.Delete Task\n\t4.Task List");
 
         menuLine();
     }
@@ -170,6 +169,5 @@ public class Main {
         // Update the tasks array reference to point to the new extended array
         tasks = temp;
 
-        System.out.println("Array extended successfully!");
     }
 }
