@@ -25,8 +25,13 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("YOU CAN UPDATE TASKS !");
+                    System.out.println("YOU CAN UPDATE TASKS!");
                     editTask();
+                    break;
+
+                case 3:
+                    System.out.println("YOU CAN DELETE TASKS!");
+                    deleteTask();
                     break;
 
                 case 5:
@@ -116,7 +121,7 @@ public class Main {
         } while (choice == 'y');
     }
 
-    public void deleteTask(){
+    public static void deleteTask(){
 
         System.out.print("Enter task number for delete: ");
         int taskNumber= input.nextInt();
