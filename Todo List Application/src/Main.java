@@ -25,7 +25,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("YOU CAN UPDATE TASKS!");
+                    System.out.println("YOU CAN UPDATE TASKS !");
                     editTask();
                     break;
 
@@ -114,6 +114,10 @@ public class Main {
             System.out.print("Do you want add another task (y/n):");
             choice = input.next().toLowerCase().charAt(0);
         } while (choice == 'y');
+    }
+
+    public void deleteTask(){
+
     }
 
     public static void showTasks() {
