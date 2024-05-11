@@ -118,6 +118,23 @@ public class Main {
 
     public void deleteTask(){
 
+        System.out.print("Enter task number for delete: ");
+        int taskNumber= input.nextInt();
+
+        if (taskNumber<0 || taskNumber>taskCount){
+            System.out.println("Invalid task number!");
+            return;
+        }
+
+        int index=taskNumber-1;
+
+        for (int i=index;i<taskCount-1;i++){
+            tasks[i][0]=tasks[i+1][0];
+        }
+
+        taskCount--;
+
+        System.out.println("Task deleted successfully.");
     }
 
     public static void showTasks() {
