@@ -91,7 +91,7 @@ public class Main {
 
     public static void editTask() {
 
-        int choice;
+        char choice;
 
         do {
 
@@ -123,23 +123,31 @@ public class Main {
 
     public static void deleteTask(){
 
-        System.out.print("Enter task number for delete: ");
-        int taskNumber= input.nextInt();
+        char choice;
 
-        if (taskNumber<0 || taskNumber>taskCount){
-            System.out.println("Invalid task number!");
-            return;
-        }
+        do {
 
-        int index=taskNumber-1;
+            System.out.print("Enter task number for delete: ");
+            int taskNumber = input.nextInt();
 
-        for (int i=index;i<taskCount-1;i++){
-            tasks[i][0]=tasks[i+1][0];
-        }
+            if (taskNumber < 0 || taskNumber > taskCount) {
+                System.out.println("Invalid task number!");
+                return;
+            }
 
-        taskCount--;
+            int index = taskNumber - 1;
 
-        System.out.println("Task deleted successfully.");
+            for (int i = index; i < taskCount - 1; i++) {
+                tasks[i][0] = tasks[i + 1][0];
+            }
+
+            taskCount--;
+
+            System.out.println("Task deleted successfully.");
+            System.out.print("Do you want delete another task (y/n) :");
+            choice=input.next().toLowerCase().charAt(0);
+
+        }while (choice == 'y');
     }
 
     public static void showTasks() {
@@ -148,6 +156,8 @@ public class Main {
             System.out.println("\t-Description : " + tasks[i][0].getDescription());
             System.out.println("\t-Due date : " + tasks[i][0].getDueDate());
         }
+
+        System.out.println("There are "+taskCount+" tasks to do!");
     }
 
     private static void extendArray() {
