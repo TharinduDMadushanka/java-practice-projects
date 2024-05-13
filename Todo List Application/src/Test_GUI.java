@@ -140,7 +140,7 @@ public class Test_GUI {
             System.out.print("Do you want delete another task (y/n) :");
             choice=input.next().toLowerCase().charAt(0);
 
-        }while (choice == 'y');
+        }while (choice == 'y')
     }
 
     public static void showTasks() {
