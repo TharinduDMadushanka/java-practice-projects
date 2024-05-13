@@ -143,7 +143,7 @@ public class Test_GUI {
         }while (choice == 'y');
     }
 
-    public static void showTasks() {dgfh
+    public static void showTasks() {
         // Implement your showTasks logic here
         // You may use JOptionPane for displaying tasks
         for (int i = 0; i < taskCount; i++) {
