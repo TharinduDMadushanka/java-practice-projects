@@ -128,7 +128,7 @@ public class Test_GUI {
                 return;
             }
 
-            int index = taskNumber - 2;
+            int index = taskNumber - 1;
 
             for (int i = index; i < taskCount - 1; i++) {
                 tasks[i][0] = tasks[i + 1][0];
