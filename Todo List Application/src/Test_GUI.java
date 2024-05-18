@@ -124,7 +124,7 @@ public class Test_GUI {
             int taskNumber = input.nextInt();
 
             if (taskNumber < 0 || taskNumber > taskCount) {
-                System.out.println("Invalid task number
+                System.out.println("Invalid task number!");
                 return;
             }
 
